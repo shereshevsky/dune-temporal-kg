@@ -47,7 +47,7 @@
         }
 
         #chart {
-            min-width: 1400px;
+            min-width: 1500px;
             height: 700px;
         }
 
@@ -578,7 +578,7 @@
     // VISUALIZATION
     // ========================================
 
-    const margin = {top: 80, right: 150, bottom: 40, left: 60};
+    const margin = {top: 80, right: 150, bottom: 40, left: 180};
     const width = 1400;
     const height = 700;
     const innerWidth = width - margin.left - margin.right;
@@ -686,9 +686,9 @@
             characterPaths.append('text')
                 .attr('class', 'character-label')
                 .attr('id', `label-${char.id}-${p.seg}`)
-                .attr('x', xScale(p.seg) + (p.seg < 24 ? -8 : 8))
+                .attr('x', xScale(p.seg) + 8)
                 .attr('y', yScale(p.y) + 4)
-                .attr('text-anchor', p.seg < 24 ? 'end' : 'start')
+                .attr('text-anchor', 'start')
                 .attr('fill', char.color)
                 .text(char.name);
         });
